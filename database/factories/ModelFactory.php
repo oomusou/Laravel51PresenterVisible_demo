@@ -15,6 +15,7 @@ $factory->define(MyBlog\User::class, function (Faker\Generator $faker) {
     return [
         'name'           => $faker->name,
         'email'          => $faker->email,
+        'show_email'     => 'Y',
         'age'            => $faker->randomNumber(2),
         'password'       => bcrypt(str_random(10)),
         'remember_token' => str_random(10),

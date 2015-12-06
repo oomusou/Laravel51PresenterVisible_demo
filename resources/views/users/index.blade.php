@@ -5,13 +5,11 @@
 </head>
 <body>
 <div>
-    @inject('userRender', 'MyBlog\Renders\UserRender')
+    @inject('userPresenter', 'MyBlog\Presenters\UserPresenter')
     @foreach($users as $user)
         <div>
             <h2>{{ $user->name }}</h2>
-            @if ($userRender->doesShowEmail($user))
-                <h2>{{ $user->email }}</h2>
-            @endif
+            {!! $userPresenter->showEmail($user) !!}
         </div>
         <hr>
     @endforeach

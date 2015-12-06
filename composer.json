@@ -22,7 +22,7 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "MyBlog\\" : "myblog/"
+            "MyBlog\\" : "app/MyBlog/"
         }
     },
     "autoload-dev": {
